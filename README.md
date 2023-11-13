@@ -1,57 +1,55 @@
-# E-Commerce Backend
+# E-Commerce Backend Application
 
-An API backend for e-commerce platforms, built using Node.js, Express, and Sequelize ORM with MySQL.
+Welcome to the E-Commerce Backend Application, a system that leverages MySQL2 and Sequelize to create and manage tables for an e-commerce database. Additionally, it provides an Express API for handling all CRUD operations for categories, products, and tags. With this application, users can seamlessly add, view, update, and delete data within their e-commerce platform.
 
 ## Table of Contents
 
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Routes](#routes)
-- [License](#license)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
+* [Technologies](#technologies)
+* [Usage](#usage)
+* [Functionality](#functionality)
+* [Future Development](#future-development)
+* [Video Walkthrough](#video-walkthrough)
+* [License](#license)
 
-## Description
+## Technologies
 
-This project provides the back end for an e-commerce site. Using the Sequelize ORM, the server interacts with a MySQL database to perform CRUD operations on product, category, and tag data.
-
-## Installation
-
-1. Clone this repository to your local machine.
-2. Navigate to the root directory in your terminal.
-3. Run `npm install` to install necessary packages.
-4. Set up your own `.env` file in the root directory, structured as:
-
-text
-DB_NAME='your_database_name'
-DB_USER='your_username'
-DB_PW='your_password'
-
-- Make sure you have MySQL installed and set up on your machine.
-- Start the MySQL command line tool and login. Run the command source db/schema.sql to set up the database.
-- Quit the MySQL tool and return to the terminal. Run npm run seed to seed the database.
-- Start the server with npm start.
+- **MySQL**
+- **Sequelize**
+- **Node.js**
+- **Express**
+- **JavaScript**
+- **Insomnia**
 
 ## Usage
 
-Use tools such as Postman or Insomnia Core to test the API routes.
+### App Initialization
 
-## Routes
+To get started with this application, follow these steps:
 
-GET /api/products - Returns all products with associated category and tag data.
-GET /api/products/:id - Returns a single product by ID with associated category and tag data.
-POST /api/products - Creates a new product.
-PUT /api/products/:id - Updates a product by its ID.
-DELETE /api/products/:id - Deletes a product by its ID.
-... [Add similar route documentation for Tags and Categories]
+1. After cloning this repository or copying its code, run `npm install` to install the required Node modules.
+2. Configure your database connection in `connection.js`. You can use a `.env` file for this purpose.
+3. Run the following commands to initialize your database:
+   ```
+   mysql -u root -p
+   source ./db/schema.sql;
+   exit
+   ```
+4. Seed the database with sample data using `npm run seed`.
+5. Start the application by running `npm start`. It will listen on port 3001.
 
-## License
 
-This project is licensed under the MIT License.
+### Future Development
 
-## Contributing
+In the future, the application can be enhanced by:
 
-To contribute to this project, please fork the repository and create a pull request with your changes. All contributions are welcome!
+- Developing a user-friendly front-end interface to complement the existing API.
+- Expanding functionality to support additional features and improvements.
+
+# Video Walkthrough
+
+[Video Demonstration](https://watch.screencastify.com/v/8P21XeFOx9szBHu5Fx7V)
+
+### License
+
+This project is licensed under the MIT License. 
 
